@@ -98,6 +98,8 @@ npx ava --seed=4f7a2c91
 
 Serial tests still run in declaration order.
 
+Within-file launch order uses the test file's project-relative path. The same seed reproduces that order across checkout directories when the relative path and test declarations are unchanged.
+
 ## Running tests with matching titles
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/avajs/ava/tree/main/examples/matching-titles?file=test.js&terminal=test&view=editor)

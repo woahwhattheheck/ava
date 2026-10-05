@@ -166,7 +166,8 @@ test('--seed randomizes test order and reports the seed', t => {
 	const seed = 'ava-seed';
 	const testFile = path.join(__dirname, '..', 'fixture', 'randomize-tests', 'test.js');
 	const titles = ['alpha', 'bravo', 'charlie', 'delta', 'echo'];
-	const expectedTitles = shuffle(titles, testOrderSeed(seed, testFile));
+	const projectDir = path.join(__dirname, '..', 'fixture');
+	const expectedTitles = shuffle(titles, testOrderSeed(seed, testFile, projectDir));
 
 	t.notSame(expectedTitles, titles);
 
